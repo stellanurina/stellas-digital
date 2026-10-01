@@ -1,0 +1,381 @@
+{
+  "_readme": "All words and prices for stellas.digital. Edit here, then run `npm run build` (Hostinger does this automatically on deploy). Text is in {\"en\": ..., \"id\": ...} pairs. In any text, {p:name} becomes a formatted price from `prices`, e.g. {p:starter} -> Rp 3.000.000.",
+
+  "site": {
+    "url": "https://stellas.digital",
+    "whatsapp": "62811181901",
+    "whatsappDisplay": "+62 811 18 19 01",
+    "email": "hello@stellas.digital",
+    "address": { "en": "Karinda Plaza B1/22, South Jakarta", "id": "Karinda Plaza B1/22, Jakarta Selatan" },
+    "hours": { "en": "Mon–Fri, 09.00–18.00 WIB", "id": "Senin–Jumat, 09.00–18.00 WIB" },
+    "year": 2026,
+    "waMessage": { "en": "Hi Stella, I'd like a free consultation", "id": "Halo Stella, saya mau konsultasi gratis" }
+  },
+
+  "prices": {
+    "starter": 3000000,
+    "business": 7000000,
+    "pro": 12000000,
+    "answer": 750000,
+    "answerSetup": 2500000,
+    "sell": 1500000,
+    "sellSetup": 4000000,
+    "automate": 2500000,
+    "automateSetup": 6000000,
+    "basicCare": 250000,
+    "basicCareYearly": 2500000,
+    "plusCare": 500000,
+    "plusCareYearly": 5000000,
+    "bundle": 9500000,
+    "bundleMonthly": 1500000
+  },
+
+  "labels": {
+    "nav": {
+      "pricing": { "en": "Pricing", "id": "Harga" },
+      "work": { "en": "Work", "id": "Portofolio" },
+      "about": { "en": "About", "id": "Tentang" },
+      "contact": { "en": "Contact", "id": "Kontak" },
+      "main": { "en": "Main", "id": "Utama" },
+      "openMenu": { "en": "Open menu", "id": "Buka menu" }
+    },
+    "waButton": { "en": "Chat on WhatsApp", "id": "Chat via WhatsApp" },
+    "choose": { "en": "Choose", "id": "Pilih" },
+    "perMonth": { "en": "/month", "id": "/bulan" },
+    "oneTime": { "en": "one-time", "id": "sekali bayar" },
+    "setup": { "en": "one-time setup", "id": "biaya setup sekali" },
+    "orYearly": { "en": "or {x}/year, 2 months free", "id": "atau {x}/tahun, gratis 2 bulan" },
+    "from": { "en": "From", "id": "Mulai" },
+    "footerTagline": { "en": "Websites and WhatsApp AI assistants for Indonesian small businesses. Based in South Jakarta.", "id": "Website dan asisten AI WhatsApp untuk UMKM Indonesia. Berbasis di Jakarta Selatan." },
+    "footerPages": { "en": "Pages", "id": "Halaman" },
+    "footerTech": { "en": "Free brand name ideas at", "id": "Ide nama brand gratis di" },
+    "cta": {
+      "title": { "en": "Ready to bring in more customers?", "id": "Siap mendatangkan lebih banyak pelanggan?" },
+      "text": { "en": "Book a free 20-minute consultation. You'll get honest advice on what your business needs, even if that's nothing from us.", "id": "Jadwalkan konsultasi gratis 20 menit. Anda akan dapat saran jujur tentang apa yang bisnis Anda butuhkan, meskipun itu bukan dari kami." }
+    }
+  },
+
+  "pages": {
+    "home": {
+      "title": { "en": "stellas.digital", "id": "stellas.digital" },
+      "description": { "en": "Websites and WhatsApp AI assistants for Indonesian small businesses. Fixed prices in rupiah, live in about a week.", "id": "Website dan asisten AI WhatsApp untuk UMKM Indonesia. Harga pasti dalam rupiah, online dalam sekitar seminggu." },
+      "pill": { "en": "For UMKM, clinics, cafés, schools and shops", "id": "Untuk UMKM, klinik, kafe, sekolah, dan toko" },
+      "headline": { "en": "A website that sells, and a WhatsApp assistant that <span class=\"hl\">never sleeps</span>.", "id": "Website yang menjual, dan asisten WhatsApp yang <span class=\"hl\">tidak pernah tidur</span>." },
+      "lede": { "en": "I build fast, professional websites and AI chatbots for Indonesian small businesses, so customers find you on Google and get answers on WhatsApp at any hour.", "id": "Saya membuat website profesional dan chatbot AI untuk UMKM Indonesia, supaya pelanggan menemukan bisnis Anda di Google dan langsung dapat jawaban di WhatsApp, kapan pun." },
+      "primaryCta": { "en": "Get a free consultation", "id": "Konsultasi gratis" },
+      "secondaryCta": { "en": "See pricing", "id": "Lihat harga" },
+      "trust": [
+        { "en": "Live in about 7 working days", "id": "Online dalam ±7 hari kerja" },
+        { "en": "Fixed prices in rupiah", "id": "Harga pasti dalam rupiah" },
+        { "en": "Pay 50% at start", "id": "Bayar 50% di awal" }
+      ],
+      "demo": {
+        "label": { "en": "Example WhatsApp conversation between a customer and an AI assistant for a café", "id": "Contoh percakapan WhatsApp antara pelanggan dan asisten AI sebuah kafe" },
+        "business": "Kopi Senja",
+        "initials": "KS",
+        "status": { "en": "AI assistant · replies instantly", "id": "Asisten AI · balas instan" },
+        "note": { "en": "Example conversation", "id": "Contoh percakapan" },
+        "messages": [
+          { "from": "customer", "time": "22.47", "text": "Kak, besok buka jam berapa? Bisa pesan 20 kopi susu untuk kantor?" },
+          { "from": "bot", "time": "22.47", "text": "Halo Kak! Besok kami buka 07.00–21.00 ☕ Bisa banget, 20 kopi susu jadi Rp 360.000. Mau diantar jam berapa, dan ke alamat mana?" },
+          { "from": "customer", "time": "22.48", "text": "Jam 9 pagi, ke Menara Karya lt. 12" },
+          { "from": "bot", "time": "22.48", "text": "Siap! Pesanan dicatat untuk besok 09.00. Pembayaran via QRIS atau transfer ya Kak. Tim kami konfirmasi pagi ini 🙏" }
+        ]
+      },
+      "clientsLabel": { "en": "Recent clients", "id": "Klien terbaru" },
+      "servicesEyebrow": { "en": "What I do", "id": "Layanan" },
+      "servicesTitle": { "en": "Three services, one goal: more customers.", "id": "Tiga layanan, satu tujuan: lebih banyak pelanggan." },
+      "servicesLede": { "en": "Start with one and add the others when you're ready. They're built to work together.", "id": "Mulai dari satu, tambah yang lain saat Anda siap. Semuanya dirancang untuk saling terhubung." },
+      "services": [
+        { "icon": "website", "fromPrice": "starter", "monthly": false,
+          "title": { "en": "AI-powered websites", "id": "Website bertenaga AI" },
+          "text": { "en": "A WordPress site with professional copy, your photos, Google Business setup and basic SEO. Easy for you to update yourself.", "id": "Website WordPress dengan teks profesional, foto Anda, setup Google Bisnisku, dan SEO dasar. Mudah Anda perbarui sendiri." } },
+        { "icon": "chat", "fromPrice": "answer", "monthly": true,
+          "title": { "en": "WhatsApp AI assistants", "id": "Asisten AI WhatsApp" },
+          "text": { "en": "A chatbot that answers questions, takes orders and books appointments on WhatsApp, and hands over to you when it should.", "id": "Chatbot yang menjawab pertanyaan, menerima pesanan, dan mencatat janji temu di WhatsApp, lalu mengalihkan ke Anda saat diperlukan." } },
+        { "icon": "shield", "fromPrice": "basicCare", "monthly": true,
+          "title": { "en": "Monthly care", "id": "Perawatan bulanan" },
+          "text": { "en": "Hosting, backups, security updates and small edits, handled for you so your site stays fast and safe.", "id": "Hosting, backup, update keamanan, dan revisi kecil kami urus, supaya website Anda tetap cepat dan aman." } }
+      ],
+      "stepsEyebrow": { "en": "How it works", "id": "Cara kerja" },
+      "stepsTitle": { "en": "From first chat to launch in about a week.", "id": "Dari chat pertama sampai online dalam sekitar seminggu." }
+    },
+
+    "pricing": {
+      "title": { "en": "Pricing · stellas.digital", "id": "Harga · stellas.digital" },
+      "description": { "en": "Website, WhatsApp AI assistant and care plan prices for Indonesian small businesses, in rupiah.", "id": "Harga website, asisten AI WhatsApp, dan perawatan bulanan untuk UMKM Indonesia, dalam rupiah." },
+      "eyebrow": { "en": "Pricing", "id": "Harga" },
+      "headline": { "en": "Clear prices. No surprises.", "id": "Harga jelas. Tanpa biaya tersembunyi." },
+      "lede": { "en": "All prices in rupiah. Pay 50% to start and 50% at launch, by bank transfer or QRIS.", "id": "Semua harga dalam rupiah. Bayar 50% di awal dan 50% saat online, via transfer bank atau QRIS." },
+      "websites": {
+        "eyebrow": { "en": "Website", "id": "Website" },
+        "title": { "en": "One-time price. Yours to keep.", "id": "Sekali bayar. Jadi milik Anda." },
+        "note": { "en": "Domain and hosting for the first year included. Two rounds of revisions on every package.", "id": "Sudah termasuk domain dan hosting tahun pertama. Dua kali revisi di setiap paket." }
+      },
+      "assistants": {
+        "eyebrow": { "en": "WhatsApp AI assistant", "id": "Asisten AI WhatsApp" },
+        "title": { "en": "Answer every customer, even at 2 a.m.", "id": "Balas setiap pelanggan, bahkan jam 2 pagi." },
+        "note": { "en": "One-time setup plus a monthly plan. WhatsApp's own message fees from Meta are passed on at cost.", "id": "Biaya setup sekali plus paket bulanan. Biaya pesan WhatsApp dari Meta diteruskan sesuai tagihan, tanpa markup." }
+      },
+      "care": {
+        "eyebrow": { "en": "Monthly care", "id": "Perawatan bulanan" },
+        "title": { "en": "Keep your site fast and safe.", "id": "Website tetap cepat dan aman." },
+        "note": { "en": "Pay monthly, or yearly and get 2 months free. Monthly plans cancel anytime with 30 days' notice.", "id": "Bayar bulanan, atau tahunan dan gratis 2 bulan. Paket bulanan bisa berhenti kapan saja dengan pemberitahuan 30 hari." }
+      },
+      "faqTitle": { "en": "Common questions", "id": "Pertanyaan umum" }
+    },
+
+    "work": {
+      "title": { "en": "Work · stellas.digital", "id": "Portofolio · stellas.digital" },
+      "description": { "en": "Case studies: Padi Villa Ubud, Playhouse Academy and FlaviaLux.", "id": "Studi kasus: Padi Villa Ubud, Playhouse Academy, dan FlaviaLux." },
+      "eyebrow": { "en": "Work", "id": "Portofolio" },
+      "headline": { "en": "Recent projects", "id": "Proyek terbaru" },
+      "lede": { "en": "Three businesses in three very different industries: a Bali villa, a Jakarta preschool and an international luxury store. Each site is live, so you can see the work for yourself.", "id": "Tiga bisnis dari tiga industri berbeda: vila di Bali, prasekolah di Jakarta, dan toko barang mewah internasional. Semua website-nya sudah online, jadi Anda bisa melihat langsung hasilnya." },
+      "did": { "en": "What I did", "id": "Yang saya kerjakan" },
+      "result": { "en": "Result", "id": "Hasil" },
+      "timeline": { "en": "Timeline", "id": "Waktu" },
+      "shotAlt": { "en": "Homepage of", "id": "Halaman utama" },
+      "nextEyebrow": { "en": "Your business next", "id": "Giliran bisnis Anda" },
+      "nextTitle": { "en": "Want a website that works this hard?", "id": "Mau website yang bekerja sekeras ini?" },
+      "nextText": { "en": "Tell me about your business and I'll suggest the right package, with a fixed price.", "id": "Ceritakan bisnis Anda, dan saya rekomendasikan paket yang tepat dengan harga pasti." }
+    },
+
+    "about": {
+      "title": { "en": "About · stellas.digital", "id": "Tentang · stellas.digital" },
+      "description": { "en": "Stella builds websites and WhatsApp AI assistants for small businesses in Jakarta.", "id": "Stella membuat website dan asisten AI WhatsApp untuk UMKM di Jakarta." },
+      "eyebrow": { "en": "About", "id": "Tentang" },
+      "headline": { "en": "Hi, I'm Stella.", "id": "Halo, saya Stella." },
+      "photoLabel": { "en": "Stella Nurina Susanto working on a laptop", "id": "Stella Nurina Susanto bekerja dengan laptop" },
+      "lede": {"en": "I’ve been building for the web since 2012. Today, my focus is on creating websites and WhatsApp AI assistants that actually make life easier for small businesses in Indonesia.", "id": "Saya sudah berkecimpung di dunia pembuatan web sejak 2012. Saat ini, fokus saya adalah membangun website dan asisten AI WhatsApp yang benar-benar mempermudah keseharian teman-teman UMKM di Indonesia."},
+      "paragraphs": [
+        {"en": "My career started at GroupM (WPP) in Jakarta, managing digital campaigns and websites for brands like Unilever and HSBC. My main job was playing translator—turning a brand's business goals into clear instructions that a tech team could actually build. Later, I went on to build the digital department for a Singapore-Japan creative agency from the ground up.", "id": "Perjalanan saya dimulai di GroupM (WPP) Jakarta, mengelola website dan kampanye digital untuk brand besar seperti Unilever dan HSBC. Tugas utama saya waktu itu adalah menjadi \"penerjemah\"—mengubah tujuan bisnis sebuah brand menjadi arahan teknis yang bisa dieksekusi oleh developer. Setelahnya, saya membangun divisi digital dari nol untuk sebuah agensi kreatif Singapura-Jepang."},
+        {"en": "Being that bridge between business and tech is still what I love doing most. Let’s be real: as a business owner, you probably don’t want to stress over things like hosting, plugins, or APIs. You just want more customers, and fewer late nights replying to the exact same WhatsApp messages. I take that off your plate, build systems that work, and explain everything in plain, jargon-free English.", "id": "Peran sebagai jembatan penghubung inilah yang paling saya nikmati sampai sekarang. Jujur saja, sebagai pemilik bisnis, Anda pasti tidak mau pusing memikirkan urusan teknis seperti hosting, plugin, atau API. Yang terpenting adalah bagaimana pelanggan terus bertambah, dan Anda tidak perlu lagi begadang hanya untuk membalas pertanyaan WhatsApp yang itu-itu saja. Saya mengambil alih kerumitan itu, membangun sistem yang bekerja untuk Anda, dan menjelaskan semuanya dengan \"bahasa manusia\"—tanpa istilah teknis yang bikin bingung."},
+        {"en": "I started stellas.digital to give local businesses access to the same high standards I used for global brands—but at a price that makes sense for them. Thanks to today’s AI tools, a small business can now get what used to require an entire agency team: a sleek website, Google-friendly content, and a smart assistant handling customers 24/7.", "id": "Saya mendirikan stellas.digital untuk memberikan standar kualitas brand global kepada bisnis lokal, tentunya dengan investasi yang masuk akal untuk UMKM. Berkat teknologi AI, hal itu sangat mungkin diwujudkan sekarang. Apa yang dulunya membutuhkan kerja keras satu tim agensi penuh—mulai dari website profesional, konten yang mudah dicari di Google, hingga asisten AI yang melayani pelanggan 24 jam—kini bisa langsung Anda miliki."},
+        {"en": "When we work together, you deal directly with me. From our very first chat to launch day and beyond, there are no handoffs and no account managers. Just a direct line to get things done.", "id": "Dan ketika kita bekerja sama, Anda akan berkomunikasi langsung dengan saya. Dari obrolan pertama kita hingga website diluncurkan dan seterusnya, tidak ada perantara dan tidak akan dioper ke account manager. Semuanya langsung tertangani."},
+        {"en": "When I’m not glued to my laptop, you’ll usually find me organizing matches on the padel court, experimenting with non-dairy baking recipes, or managing my own short-term rental properties. Being a business owner myself, I know exactly what it takes to keep things running smoothly behind the scenes!", "id": "Saat sedang tidak di depan laptop, Anda biasanya bisa menemukan saya di lapangan padel, mencoba resep-resep baking non-dairy, atau mengurus bisnis short-term rental properti saya sendiri. Sebagai sesama pemilik bisnis, saya sangat paham rasanya menjaga roda usaha tetap berputar setiap harinya!"}
+      ],
+      "workLink": { "en": "See my recent projects →", "id": "Lihat proyek terbaru saya →" },
+      "valuesEyebrow": { "en": "How I work", "id": "Cara saya bekerja" },
+      "valuesTitle": { "en": "What you can expect", "id": "Yang bisa Anda harapkan" },
+      "values": [
+        { "title": { "en": "Plain language", "id": "Bahasa yang mudah" }, "text": { "en": "No jargon. You'll always know what you're paying for and why.", "id": "Tanpa istilah rumit. Anda selalu tahu apa yang Anda bayar dan kenapa." } },
+        { "title": { "en": "Fixed prices", "id": "Harga pasti" }, "text": { "en": "The price on the pricing page is the price you pay. No hidden extras.", "id": "Harga di halaman harga adalah harga yang Anda bayar. Tanpa biaya tambahan tersembunyi." } },
+        { "title": { "en": "You own everything", "id": "Semua milik Anda" }, "text": { "en": "Your domain, your content and your logins stay in your name.", "id": "Domain, konten, dan akses login tetap atas nama Anda." } }
+      ]
+    },
+
+    "contact": {
+      "title": { "en": "Contact · stellas.digital", "id": "Kontak · stellas.digital" },
+      "description": { "en": "Contact Stella on WhatsApp or email about a website or WhatsApp AI assistant.", "id": "Hubungi Stella lewat WhatsApp atau email soal website atau asisten AI WhatsApp." },
+      "eyebrow": { "en": "Contact", "id": "Kontak" },
+      "headline": { "en": "Let's talk about your business.", "id": "Yuk, ngobrol soal bisnis Anda." },
+      "lede": { "en": "The fastest way to reach me is WhatsApp. I usually reply within a few hours on weekdays.", "id": "Cara tercepat menghubungi saya adalah lewat WhatsApp. Biasanya saya balas dalam beberapa jam di hari kerja." },
+      "formTitle": { "en": "Send an enquiry on WhatsApp", "id": "Kirim pertanyaan lewat WhatsApp" },
+      "formNote": { "en": "Fill this in and it opens WhatsApp with your message ready to send.", "id": "Isi formulir ini, lalu WhatsApp terbuka dengan pesan yang siap dikirim." },
+      "name": { "en": "Your name", "id": "Nama Anda" },
+      "business": { "en": "Business name", "id": "Nama bisnis" },
+      "interest": { "en": "I'm interested in", "id": "Saya tertarik dengan" },
+      "message": { "en": "Anything else?", "id": "Ada yang ingin ditambahkan?" },
+      "submit": { "en": "Open WhatsApp", "id": "Buka WhatsApp" },
+      "options": [
+        { "en": "A new website", "id": "Website baru" },
+        { "en": "A WhatsApp AI assistant", "id": "Asisten AI WhatsApp" },
+        { "en": "The launch bundle", "id": "Paket hemat" },
+        { "en": "A care plan for my existing site", "id": "Perawatan untuk website saya yang sudah ada" },
+        { "en": "Not sure yet", "id": "Belum yakin" }
+      ],
+      "office": { "en": "Office", "id": "Kantor" },
+      "hoursLabel": { "en": "Hours", "id": "Jam kerja" }
+    }
+  },
+
+  "steps": [
+    { "day": { "en": "Day 1", "id": "Hari 1" }, "title": { "en": "Free 20-minute call", "id": "Konsultasi gratis 20 menit" }, "text": { "en": "I learn about your business and recommend the right package.", "id": "Saya pelajari bisnis Anda dan rekomendasikan paket yang tepat." } },
+    { "day": { "en": "Day 2", "id": "Hari 2" }, "title": { "en": "Send your materials", "id": "Kirim materi Anda" }, "text": { "en": "Logo, photos and your price list. I handle the writing.", "id": "Logo, foto, dan daftar harga. Penulisan teks saya yang urus." } },
+    { "day": { "en": "Days 3–6", "id": "Hari 3–6" }, "title": { "en": "I build, you review", "id": "Saya kerjakan, Anda cek" }, "text": { "en": "You get a live preview link. Two rounds of changes included.", "id": "Anda dapat link preview. Sudah termasuk dua kali revisi." } },
+    { "day": { "en": "Day 7", "id": "Hari 7" }, "title": { "en": "Launch", "id": "Online" }, "text": { "en": "Your site and assistant go live, and I show you how to use them.", "id": "Website dan asisten Anda online, dan saya ajari cara memakainya." } }
+  ],
+
+  "websitePlans": [
+    { "name": "Starter", "price": "starter",
+      "blurb": { "en": "A clean one-page site to get found online.", "id": "Website satu halaman yang rapi supaya bisnis Anda mudah ditemukan." },
+      "features": [
+        { "en": "1-page site: about, services, contact", "id": "Website 1 halaman: profil, layanan, kontak" },
+        { "en": "AI-assisted copy you approve", "id": "Teks dibantu AI, Anda yang menyetujui" },
+        { "en": "WhatsApp chat button", "id": "Tombol chat WhatsApp" },
+        { "en": "Google Business Profile setup", "id": "Setup Google Bisnisku" },
+        { "en": "Domain + hosting for year one", "id": "Domain + hosting tahun pertama" }
+      ] },
+    { "name": "Business", "price": "business", "featured": true,
+      "badge": { "en": "Most popular", "id": "Paling laris" },
+      "blurb": { "en": "A full site for businesses ready to grow.", "id": "Website lengkap untuk bisnis yang siap berkembang." },
+      "features": [
+        { "en": "Up to 5 pages", "id": "Hingga 5 halaman" },
+        { "en": "Everything in Starter", "id": "Semua fitur Starter" },
+        { "en": "Service or menu pages with photos", "id": "Halaman layanan atau menu dengan foto" },
+        { "en": "Basic SEO and Google Maps", "id": "SEO dasar dan Google Maps" },
+        { "en": "Contact form to email or WhatsApp", "id": "Formulir kontak ke email atau WhatsApp" },
+        { "en": "30-minute training to edit it yourself", "id": "Pelatihan 30 menit untuk edit sendiri" }
+      ] },
+    { "name": "Pro", "price": "pro",
+      "blurb": { "en": "For businesses that take bookings or sell online.", "id": "Untuk bisnis yang menerima booking atau jualan online." },
+      "features": [
+        { "en": "Up to 10 pages", "id": "Hingga 10 halaman" },
+        { "en": "Everything in Business", "id": "Semua fitur Business" },
+        { "en": "Online booking or product catalog", "id": "Booking online atau katalog produk" },
+        { "en": "Blog with 3 starter articles", "id": "Blog dengan 3 artikel awal" },
+        { "en": "Bahasa Indonesia + English", "id": "Bahasa Indonesia + English" },
+        { "en": "Google Analytics setup", "id": "Setup Google Analytics" }
+      ] }
+  ],
+
+  "assistantPlans": [
+    { "name": "Answer", "price": "answer", "setup": "answerSetup",
+      "blurb": { "en": "Replies to common questions instantly.", "id": "Menjawab pertanyaan umum secara instan." },
+      "features": [
+        { "en": "Trained on your prices, hours and FAQs", "id": "Dilatih dengan harga, jam buka, dan FAQ Anda" },
+        { "en": "Replies in Bahasa Indonesia and English", "id": "Membalas dalam Bahasa Indonesia dan Inggris" },
+        { "en": "Hands over to you when needed", "id": "Dialihkan ke Anda saat diperlukan" },
+        { "en": "Monthly answer tuning", "id": "Penyempurnaan jawaban tiap bulan" }
+      ] },
+    { "name": "Sell", "price": "sell", "setup": "sellSetup", "featured": true,
+      "badge": { "en": "Best value", "id": "Paling hemat" },
+      "blurb": { "en": "Takes orders and bookings for you.", "id": "Menerima pesanan dan booking untuk Anda." },
+      "features": [
+        { "en": "Everything in Answer", "id": "Semua fitur Answer" },
+        { "en": "Order taking from your menu or catalog", "id": "Terima pesanan dari menu atau katalog" },
+        { "en": "Appointment booking and reminders", "id": "Booking janji temu dan pengingat" },
+        { "en": "Orders logged to Google Sheets", "id": "Pesanan tercatat di Google Sheets" },
+        { "en": "Monthly report on top questions", "id": "Laporan bulanan pertanyaan terbanyak" }
+      ] },
+    { "name": "Automate", "price": "automate", "setup": "automateSetup", "fromPrice": true,
+      "blurb": { "en": "Connects WhatsApp to the rest of your business.", "id": "Menghubungkan WhatsApp dengan sistem bisnis Anda." },
+      "features": [
+        { "en": "Everything in Sell", "id": "Semua fitur Sell" },
+        { "en": "Connects to your POS, CRM or calendar", "id": "Terhubung ke POS, CRM, atau kalender" },
+        { "en": "Broadcasts to opted-in customers", "id": "Broadcast ke pelanggan yang setuju" },
+        { "en": "Shared inbox for your team", "id": "Inbox bersama untuk tim" },
+        { "en": "Priority support", "id": "Dukungan prioritas" }
+      ] }
+  ],
+
+  "carePlans": [
+    { "name": "Basic Care", "price": "basicCare", "yearly": "basicCareYearly",
+      "features": [
+        { "en": "Hosting and domain renewal", "id": "Perpanjangan hosting dan domain" },
+        { "en": "Weekly backups and security updates", "id": "Backup mingguan dan update keamanan" },
+        { "en": "1 small edit per month", "id": "1 revisi kecil per bulan" }
+      ] },
+    { "name": "Plus Care", "price": "plusCare", "yearly": "plusCareYearly",
+      "features": [
+        { "en": "Everything in Basic Care", "id": "Semua fitur Basic Care" },
+        { "en": "Up to 4 edits per month", "id": "Hingga 4 revisi per bulan" },
+        { "en": "Monthly visitor report", "id": "Laporan pengunjung bulanan" }
+      ] }
+  ],
+
+  "bundle": {
+    "_note": "The regular price and monthly saving are calculated from `prices`: Business website + Sell setup, and Sell + Basic Care. The saving line only shows when there is a real saving.",
+    "eyebrow": { "en": "Launch bundle", "id": "Paket hemat" },
+    "title": { "en": "Business website + Sell assistant", "id": "Website Business + asisten Sell" },
+    "monthly": { "en": "Then {p:bundleMonthly}/month for the assistant plus Basic Care.", "id": "Selanjutnya {p:bundleMonthly}/bulan untuk asisten plus Basic Care." },
+    "saving": { "en": "That saves {saving} every month.", "id": "Hemat {saving} setiap bulan." },
+    "instead": { "en": "Instead of {regular}", "id": "Normalnya {regular}" },
+    "button": { "en": "Get the bundle", "id": "Ambil paket hemat" }
+  },
+
+  "faq": [
+    { "q": { "en": "What do I need to prepare?", "id": "Apa yang perlu saya siapkan?" }, "a": { "en": "Your logo, some photos and your list of services or products with prices. I write the text with AI help, and you approve every word.", "id": "Logo, beberapa foto, dan daftar layanan atau produk beserta harganya. Teks saya tulis dengan bantuan AI, dan Anda menyetujui setiap katanya." } },
+    { "q": { "en": "Do I own the website?", "id": "Apakah website jadi milik saya?" }, "a": { "en": "Yes. The domain is registered in your name, and if you ever leave, I hand over every file and login.", "id": "Ya. Domain didaftarkan atas nama Anda, dan jika suatu saat Anda berhenti, semua file dan akses login saya serahkan." } },
+    { "q": { "en": "Is the WhatsApp assistant official?", "id": "Apakah asisten WhatsApp-nya resmi?" }, "a": { "en": "Yes. It runs on the official WhatsApp Business Platform, so your number stays safe. Meta charges a small fee per message, which I pass on at cost.", "id": "Ya. Asisten berjalan di WhatsApp Business Platform resmi, jadi nomor Anda aman. Meta mengenakan biaya kecil per pesan, yang saya teruskan sesuai tagihan tanpa markup." } },
+    { "q": { "en": "Can I cancel a monthly plan?", "id": "Bisakah saya berhenti berlangganan?" }, "a": { "en": "Anytime, with 30 days' notice. No long contracts.", "id": "Bisa kapan saja, dengan pemberitahuan 30 hari. Tanpa kontrak panjang." } },
+    { "q": { "en": "How do payments work?", "id": "Bagaimana cara pembayarannya?" }, "a": { "en": "50% to start and 50% at launch, by bank transfer or QRIS. Monthly plans are billed at the start of each month.", "id": "50% di awal dan 50% saat online, via transfer bank atau QRIS. Paket bulanan ditagih setiap awal bulan." } }
+  ],
+
+  "cases": [
+    { "slug": "padi-villa", "name": "Padi Villa Ubud", "domain": "padivillaubud.com",
+      "tag": { "en": "Hospitality · Ubud, Bali", "id": "Perhotelan · Ubud, Bali" },
+      "summary": { "en": "A website for a private pool villa in Ubud, built to win direct bookings alongside Airbnb, Booking.com and Agoda.", "id": "Website untuk vila dengan kolam renang pribadi di Ubud, dibuat untuk mendapatkan booking langsung selain dari Airbnb, Booking.com, dan Agoda." },
+      "did": [
+        { "en": "WordPress and Elementor build with a warm, tropical design that shows off the pool and rice field views", "id": "Website WordPress dan Elementor dengan desain tropis yang hangat, menonjolkan kolam dan pemandangan sawah" },
+        { "en": "All website copy, amenities, check-in details and local destination guides", "id": "Semua teks website, fasilitas, info check-in, dan panduan wisata lokal" },
+        { "en": "SEO travel blog, such as a guide to Ubud Monkey Forest and 3-day Ubud itineraries", "id": "Blog wisata untuk SEO, seperti panduan Ubud Monkey Forest dan itinerary 3 hari di Ubud" },
+        { "en": "Lodgify booking engine with calendar sync, automated guest messages and live availability", "id": "Mesin booking Lodgify dengan sinkronisasi kalender, pesan otomatis ke tamu, dan ketersediaan real-time" },
+        { "en": "Links to sister properties in Jakarta and BSD City", "id": "Tautan ke properti lain di Jakarta dan BSD City" }
+      ],
+      "result": { "en": "Guests can book direct, with availability synced across every booking channel. I kept listings, guest messaging and blog publishing running through mid-2026.", "id": "Tamu bisa booking langsung, dengan ketersediaan yang tersinkron di semua kanal. Saya juga mengelola listing, pesan tamu, dan publikasi blog hingga pertengahan 2026." },
+      "timeline": { "en": "Mid-2025 to early 2026, maintained through mid-2026", "id": "Pertengahan 2025 hingga awal 2026, dirawat hingga pertengahan 2026" } },
+    { "slug": "playhouse-academy", "name": "Playhouse Academy", "domain": "playhouseacademy.id",
+      "tag": { "en": "Education · Jakarta", "id": "Pendidikan · Jakarta" },
+      "summary": { "en": "A website for a Cambridge Christian preschool and kindergarten with two campuses in Jakarta.", "id": "Website untuk prasekolah dan TK Kristen berkurikulum Cambridge dengan dua kampus di Jakarta." },
+      "did": [
+        { "en": "Digital marketing proposal, SEO audit and site structure", "id": "Proposal digital marketing, audit SEO, dan struktur website" },
+        { "en": "WordPress build with a warm, child-friendly design organised by age group and program", "id": "Website WordPress dengan desain hangat dan ramah anak, disusun per kelompok usia dan program" },
+        { "en": "Curriculum, program and enrollment content written for parents", "id": "Konten kurikulum, program, dan pendaftaran yang ditulis untuk orang tua" },
+        { "en": "Calendly tour booking and quick-contact lead forms", "id": "Booking tur sekolah via Calendly dan formulir kontak cepat" },
+        { "en": "Google Analytics 4, Tag Manager and Search Console tracking", "id": "Pelacakan Google Analytics 4, Tag Manager, dan Search Console" }
+      ],
+      "result": { "en": "Parents now book school tours straight into the calendar instead of emailing back and forth, and every inquiry, tour booking and brochure download is tracked.", "id": "Orang tua kini bisa langsung memilih jadwal tur sekolah tanpa bolak-balik email, dan setiap pertanyaan, booking tur, serta unduhan brosur tercatat." },
+      "timeline": { "en": "June 2025 to August 2026", "id": "Juni 2025 hingga Agustus 2026" },
+      "note": { "en": "In August 2026 I handed the site, analytics and booking setup over in full to the school's new agency.", "id": "Pada Agustus 2026, website, analytics, dan sistem booking saya serahkan sepenuhnya ke agensi baru sekolah." } },
+    { "slug": "flavialux", "name": "FlaviaLux", "domain": "flavialux.com",
+      "tag": { "en": "Luxury e-commerce · Hong Kong", "id": "E-commerce barang mewah · Hong Kong" },
+      "summary": { "en": "An online store for FlaviaLux Limited, trading pre-owned luxury bags between Hong Kong, Bangkok and Jakarta.", "id": "Toko online untuk FlaviaLux Limited, yang menjual tas mewah preloved antara Hong Kong, Bangkok, dan Jakarta." },
+      "did": [
+        { "en": "Brand identity and an elegant store design in green and gold", "id": "Identitas brand dan desain toko yang elegan dengan warna hijau dan emas" },
+        { "en": "Product pages with condition badges such as Like New and Full Set with Receipt", "id": "Halaman produk dengan label kondisi seperti Like New dan Full Set with Receipt" },
+        { "en": "Brand story, authenticity, shipping and payment pages that build buyer trust", "id": "Halaman cerita brand, keaslian produk, pengiriman, dan pembayaran untuk membangun kepercayaan pembeli" },
+        { "en": "International payments by Wise and card links, with multi-currency pricing", "id": "Pembayaran internasional via Wise dan link kartu kredit, dengan harga multi-mata uang" },
+        { "en": "Sourcing request form for bags available to order", "id": "Formulir permintaan untuk tas yang bisa dipesan khusus" }
+      ],
+      "result": { "en": "An international storefront now serves buyers across Hong Kong, Bangkok and Jakarta, with shipping from three countries.", "id": "Toko internasional ini kini melayani pembeli di Hong Kong, Bangkok, dan Jakarta, dengan pengiriman dari tiga negara." },
+      "timeline": { "en": "May 2025 to early 2026", "id": "Mei 2025 hingga awal 2026" } }
+  ],
+
+  "chat": {
+    "_note": "Answers for the Stellas assistant on every page. Keywords are matched as whole words in either language. Prices use {p:name}, so they stay in sync with the pricing page.",
+    "greeting": { "en": "Hi! I'm the Stellas assistant. Ask me about prices, timing or past work, or pick a topic below.", "id": "Halo! Saya asisten Stellas. Tanyakan soal harga, waktu pengerjaan, atau portofolio, atau pilih topik di bawah." },
+    "fallback": { "en": "Good question. I'll let Stella answer that one personally.", "id": "Pertanyaan bagus. Biar Stella yang menjawab langsung ya." },
+    "chips": [
+      { "label": { "en": "Prices", "id": "Harga" }, "query": "price" },
+      { "label": { "en": "WhatsApp assistant", "id": "Asisten WhatsApp" }, "query": "chatbot" },
+      { "label": { "en": "How long?", "id": "Berapa lama?" }, "query": "how long" },
+      { "label": { "en": "See past work", "id": "Lihat portofolio" }, "query": "portfolio" },
+      { "label": { "en": "Talk to Stella", "id": "Chat dengan Stella" }, "query": "human" }
+    ],
+    "answers": [
+      { "keywords": ["price", "pricing", "cost", "how much", "harga", "biaya", "berapa", "tarif", "paket", "package"],
+        "answer": { "en": "Websites are a one-time price: Starter {p:starter}, Business {p:business} and Pro {p:pro}, with domain and hosting for the first year included.", "id": "Website sekali bayar: Starter {p:starter}, Business {p:business}, dan Pro {p:pro}, sudah termasuk domain dan hosting tahun pertama." },
+        "links": [{ "href": "pricing.html", "label": { "en": "See all prices", "id": "Lihat semua harga" } }] },
+      { "keywords": ["whatsapp bot", "chatbot", "bot", "assistant", "asisten", "ai", "auto reply", "balas otomatis", "otomatis"],
+        "answer": { "en": "The WhatsApp AI assistant answers customers, takes orders and books appointments. Plans start at {p:answer}/month plus a one-time setup from {p:answerSetup}.", "id": "Asisten AI WhatsApp menjawab pelanggan, menerima pesanan, dan mencatat janji temu. Paket mulai {p:answer}/bulan plus biaya setup sekali mulai {p:answerSetup}." },
+        "links": [{ "href": "pricing.html", "label": { "en": "Compare assistant plans", "id": "Bandingkan paket asisten" } }] },
+      { "keywords": ["how long", "time", "timeline", "days", "fast", "when", "lama", "berapa hari", "waktu", "cepat", "kapan"],
+        "answer": { "en": "Most websites go live in about 7 working days: a free call on day 1, your materials on day 2, build and review on days 3 to 6, launch on day 7.", "id": "Kebanyakan website online dalam sekitar 7 hari kerja: konsultasi gratis di hari 1, kirim materi di hari 2, pengerjaan dan review di hari 3–6, online di hari 7." } },
+      { "keywords": ["own", "ownership", "domain", "my name", "milik", "punya", "atas nama"],
+        "answer": { "en": "Yes, you own everything. The domain is registered in your name, and if you ever leave, I hand over every file and login.", "id": "Ya, semuanya milik Anda. Domain didaftarkan atas nama Anda, dan jika suatu saat Anda berhenti, semua file dan akses login saya serahkan." } },
+      { "keywords": ["pay", "payment", "qris", "transfer", "deposit", "bayar", "pembayaran", "dp"],
+        "answer": { "en": "You pay 50% to start and 50% at launch, by bank transfer or QRIS. Monthly plans are billed at the start of each month.", "id": "Bayar 50% di awal dan 50% saat online, via transfer bank atau QRIS. Paket bulanan ditagih setiap awal bulan." } },
+      { "keywords": ["care", "maintenance", "hosting", "update", "backup", "perawatan"],
+        "answer": { "en": "Care plans keep your site fast and safe: Basic Care {p:basicCare}/month (hosting, backups, 1 small edit) or Plus Care {p:plusCare}/month (up to 4 edits and a visitor report). Paying yearly gets you 2 months free.", "id": "Paket perawatan menjaga website tetap cepat dan aman: Basic Care {p:basicCare}/bulan (hosting, backup, 1 revisi kecil) atau Plus Care {p:plusCare}/bulan (hingga 4 revisi dan laporan pengunjung). Bayar tahunan, gratis 2 bulan." } },
+      { "keywords": ["portfolio", "work", "example", "client", "project", "contoh", "portofolio", "klien", "proyek", "hasil"],
+        "answer": { "en": "Recent projects include Padi Villa Ubud (a Bali villa with direct booking), Playhouse Academy (a Jakarta preschool with tour booking) and FlaviaLux (an international luxury store).", "id": "Proyek terbaru antara lain Padi Villa Ubud (vila di Bali dengan booking langsung), Playhouse Academy (prasekolah di Jakarta dengan booking tur), dan FlaviaLux (toko barang mewah internasional)." },
+        "links": [{ "href": "work.html", "label": { "en": "See the case studies", "id": "Lihat studi kasus" } }] },
+      { "keywords": ["prepare", "need", "materials", "send", "siapkan", "perlu", "butuh", "materi", "kirim"],
+        "answer": { "en": "Just your logo, some photos and your list of services or products with prices. I write the text with AI help, and you approve every word.", "id": "Cukup logo, beberapa foto, dan daftar layanan atau produk beserta harganya. Teksnya saya tulis dengan bantuan AI, dan Anda menyetujui setiap katanya." } },
+      { "keywords": ["cancel", "stop", "contract", "berhenti", "kontrak", "batal"],
+        "answer": { "en": "You can cancel a monthly plan anytime with 30 days' notice. There are no long contracts.", "id": "Paket bulanan bisa dihentikan kapan saja dengan pemberitahuan 30 hari. Tanpa kontrak panjang." } },
+      { "keywords": ["official", "meta", "banned", "safe", "resmi", "aman", "blokir"],
+        "answer": { "en": "The assistant runs on the official WhatsApp Business Platform, so your number stays safe. Meta's small per-message fees are passed on at cost.", "id": "Asisten berjalan di WhatsApp Business Platform resmi, jadi nomor Anda aman. Biaya kecil per pesan dari Meta diteruskan sesuai tagihan, tanpa markup." } },
+      { "keywords": ["bundle", "discount", "promo", "hemat", "diskon", "paket hemat"],
+        "answer": { "en": "The launch bundle combines a Business website and the Sell assistant for {p:bundle} one-time instead of {regular}, then {p:bundleMonthly}/month.", "id": "Paket hemat menggabungkan website Business dan asisten Sell seharga {p:bundle} sekali bayar (normalnya {regular}), lalu {p:bundleMonthly}/bulan." },
+        "links": [{ "href": "pricing.html", "label": { "en": "See the bundle", "id": "Lihat paket hemat" } }] },
+      { "keywords": ["who", "about", "stella", "experience", "siapa", "tentang", "pengalaman"],
+        "answer": { "en": "I'm Stella. I've worked in digital since 2012, starting at GroupM (WPP) in Jakarta on websites and campaigns for brands like Unilever and HSBC.", "id": "Saya Stella. Saya berkarier di dunia digital sejak 2012, berawal di GroupM (WPP) Jakarta untuk website dan kampanye brand seperti Unilever dan HSBC." },
+        "links": [{ "href": "about.html", "label": { "en": "More about me", "id": "Tentang saya" } }] },
+      { "keywords": ["human", "talk", "call", "contact", "consult", "meeting", "hubungi", "ngobrol", "konsultasi", "telepon", "bicara"],
+        "answer": { "en": "Happy to talk it through. Tap below to message me on WhatsApp, and I usually reply within a few hours on weekdays.", "id": "Dengan senang hati. Klik di bawah untuk chat dengan saya di WhatsApp. Biasanya saya balas dalam beberapa jam di hari kerja." },
+        "whatsapp": true }
+    ]
+  }
+}

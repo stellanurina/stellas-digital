@@ -1,0 +1,12 @@
+{
+  "name": "stellas-digital",
+  "version": "1.0.0",
+  "private": true,
+  "description": "stellas.digital: websites and WhatsApp AI assistants for Indonesian small businesses. All content lives in content.json.",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
