@@ -344,13 +344,13 @@
       { "label": { "en": "Talk to Stella", "id": "Chat dengan Stella" }, "query": "human" }
     ],
     "answers": [
-      { "keywords": ["price", "pricing", "cost", "how much", "harga", "biaya", "berapa", "tarif", "paket", "package"],
+      { "keywords": ["price", "prices", "pricing", "cost", "how much", "harga", "harganya", "biaya", "biayanya", "berapa harga", "berapa biaya", "tarif", "paket", "package"],
         "answer": { "en": "Websites are a one-time price: Starter {p:starter}, Business {p:business} and Pro {p:pro}, with domain and hosting for the first year included.", "id": "Website sekali bayar: Starter {p:starter}, Business {p:business}, dan Pro {p:pro}, sudah termasuk domain dan hosting tahun pertama." },
         "links": [{ "href": "pricing.html", "label": { "en": "See all prices", "id": "Lihat semua harga" } }] },
       { "keywords": ["whatsapp bot", "chatbot", "bot", "assistant", "asisten", "ai", "auto reply", "balas otomatis", "otomatis"],
         "answer": { "en": "The WhatsApp AI assistant answers customers, takes orders and books appointments. Plans start at {p:answer}/month plus a one-time setup from {p:answerSetup}.", "id": "Asisten AI WhatsApp menjawab pelanggan, menerima pesanan, dan mencatat janji temu. Paket mulai {p:answer}/bulan plus biaya setup sekali mulai {p:answerSetup}." },
         "links": [{ "href": "pricing.html", "label": { "en": "Compare assistant plans", "id": "Bandingkan paket asisten" } }] },
-      { "keywords": ["how long", "time", "timeline", "days", "fast", "when", "lama", "berapa hari", "waktu", "cepat", "kapan"],
+      { "keywords": ["how long", "time", "timeline", "days", "fast", "when", "lama", "berapa lama", "berapa hari", "waktu", "cepat", "kapan", "pengerjaan", "pengerjaannya", "selesai", "jadinya"],
         "answer": { "en": "Most websites go live in about 7 working days: a free call on day 1, your materials on day 2, build and review on days 3 to 6, launch on day 7.", "id": "Kebanyakan website online dalam sekitar 7 hari kerja: konsultasi gratis di hari 1, kirim materi di hari 2, pengerjaan dan review di hari 3–6, online di hari 7." } },
       { "keywords": ["own", "ownership", "domain", "my name", "milik", "punya", "atas nama"],
         "answer": { "en": "Yes, you own everything. The domain is registered in your name, and if you ever leave, I hand over every file and login.", "id": "Ya, semuanya milik Anda. Domain didaftarkan atas nama Anda, dan jika suatu saat Anda berhenti, semua file dan akses login saya serahkan." } },

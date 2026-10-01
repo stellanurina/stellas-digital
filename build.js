@@ -6,6 +6,8 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = __dirname;
+// Only this site's own files may run; fonts come from Google Fonts. No inline scripts allowed.
+const CSP = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests";
 const SRC = path.join(ROOT, 'src');
 const DIST = path.join(ROOT, 'dist');
 const C = JSON.parse(fs.readFileSync(path.join(ROOT, 'content.json'), 'utf8'));
@@ -144,7 +146,9 @@ function build(lang) {
       whatsapp: !!a.whatsapp
     }))
   };
-  const chatScript = `<script>window.STELLAS_CHAT=${JSON.stringify(chatData).replace(/</g, '\\u003c')};</script>`;
+  // Written to its own file so the security policy can block all inline scripts.
+  fs.writeFileSync(path.join(outDir, 'chat-data.js'), `window.STELLAS_CHAT=${JSON.stringify(chatData).replace(/</g, '\\u003c')};\n`);
+  const chatScript = `<script src="chat-data.js"></script>`;
 
   function page(fname, meta, body) {
     const html = `<!doctype html>
@@ -152,6 +156,8 @@ function build(lang) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="${CSP}">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>${esc(t(meta.title))}</title>
 <meta name="description" content="${esc(t(meta.description))}">
 <link rel="canonical" href="${url(lang, fname)}">
@@ -425,6 +431,42 @@ fs.mkdirSync(DIST, { recursive: true });
 fs.cpSync(SRC, DIST, { recursive: true });
 build('id');
 build('en');
+
+// ---------- robots, sitemap, security contact, 404 ----------
+const PAGES = ['index.html', 'pricing.html', 'work.html', 'about.html', 'contact.html'];
+const pageUrl = (lg, f) => C.site.url + (lg === 'en' ? '/en/' : '/') + (f === 'index.html' ? '' : f);
+const today = new Date().toISOString().slice(0, 10);
+fs.writeFileSync(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${C.site.url}/sitemap.xml\n`);
+fs.writeFileSync(path.join(DIST, 'sitemap.xml'),
+  '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' +
+  PAGES.flatMap(f => ['id', 'en'].map(lg => `  <url><loc>${pageUrl(lg, f)}</loc><lastmod>${today}</lastmod>` +
+    `<xhtml:link rel="alternate" hreflang="id" href="${pageUrl('id', f)}"/><xhtml:link rel="alternate" hreflang="en" href="${pageUrl('en', f)}"/></url>`)).join('\n') +
+  '\n</urlset>\n');
+const expires = new Date(Date.now() + 365 * 864e5).toISOString().replace(/\.\d+Z$/, 'Z');
+fs.mkdirSync(path.join(DIST, '.well-known'), { recursive: true });
+fs.writeFileSync(path.join(DIST, '.well-known', 'security.txt'),
+  `Contact: mailto:${C.site.email}\nExpires: ${expires}\nPreferred-Languages: id, en\nCanonical: ${C.site.url}/.well-known/security.txt\n`);
+fs.writeFileSync(path.join(DIST, '404.html'), `<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="${CSP}">
+<meta name="robots" content="noindex">
+<title>Halaman tidak ditemukan · stellas.digital</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main class="wrap" style="padding-block:96px;display:flex;flex-direction:column;gap:18px;max-width:640px">
+  <a class="brand" href="/"><img src="/images/logo.webp" alt="stellas.digital" width="112" height="32"></a>
+  <h1>Halaman tidak ditemukan</h1>
+  <p class="lede">Halaman yang Anda cari tidak ada atau sudah dipindahkan. <span lang="en">This page doesn't exist or has moved.</span></p>
+  <div class="btn-row"><a class="btn btn-primary" href="/">Kembali ke beranda</a><a class="btn btn-ghost" href="/en/" lang="en">English site</a></div>
+</main>
+</body>
+</html>
+`);
 
 // Catch typos: every case study needs a screenshot.
 for (const c of C.cases) {
