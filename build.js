@@ -155,6 +155,14 @@ function build(lang) {
     const html = `<!doctype html>
 <html lang="${lang}">
 <head>
+${site.gaId ? `
+<script async src="https://www.googletagmanager.com/gtag/js?id=${site.gaId}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '${site.gaId}');
+</script>` : ''}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="${CSP}">
