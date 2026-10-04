@@ -7,7 +7,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 // Only this site's own files may run; fonts come from Google Fonts. No inline scripts allowed.
-const CSP = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests";
+const CSP = "default-src 'self'; script-src 'self' https://*.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests";
 const SRC = path.join(ROOT, 'src');
 const DIST = path.join(ROOT, 'dist');
 const C = JSON.parse(fs.readFileSync(path.join(ROOT, 'content.json'), 'utf8'));
@@ -150,15 +150,13 @@ function build(lang) {
   // Written to its own file so the security policy can block all inline scripts.
   fs.writeFileSync(path.join(outDir, 'chat-data.js'), `window.STELLAS_CHAT=${JSON.stringify(chatData).replace(/</g, '\\u003c')};\n`);
   const chatScript = `<script src="chat-data.js"></script>`;
-
-  function page(fname, meta, body) {
-    const html = `<!doctype html>
-<html lang="${lang}">
-<head>
-${site.gaId ? `
-<script async src="https://www.googletagmanager.com/gtag/js?id=${site.gaId}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
+// GA setup in its own file, so the security policy can stay strict
+if (S.gaId) {
+  fs.writeFileSync(path.join(outDir, 'ga.js'),
+    `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config',${JSON.stringify(S.gaId)});`);
+}
+${S.gaId ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${S.gaId}"></script>
+<script src="ga.js"></script>` : ''}
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', '${site.gaId}');
