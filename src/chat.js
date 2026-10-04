@@ -10,6 +10,15 @@
   var WA = 'https://wa.me/' + D.whatsapp + '?text=';
   function t(en, id) { return ID ? id : en; }
   function wa(msg) { return WA + encodeURIComponent(msg); }
+  
+    // Google Analytics events (do nothing if GA isn't loaded)
+  function ga(name, params) {
+    if (window.gtag) gtag('event', name, Object.assign({ page_lang: document.documentElement.lang }, params || {}));
+  }
+  // Strip emails and phone numbers before sending text to GA
+  function scrub(s) {
+    return (s || '').replace(/\S+@\S+/g, '[email]').replace(/\+?\d[\d\s-]{6,}/g, '[number]').slice(0, 100);
+  }
 
   var KB = D.answers.map(function (e) {
     return { k: e.keywords, a: e.answer, wa: !!e.whatsapp,
