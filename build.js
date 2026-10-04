@@ -108,13 +108,14 @@ function build(lang) {
         <ul>
           <li><a href="${WA}" target="_blank" rel="noopener">WhatsApp ${S.whatsappDisplay}</a></li>
           <li><a href="mailto:${S.email}">${S.email}</a></li>
+          <li><a href="https://www.instagram.com/${S.instagram}/" target="_blank" rel="noopener">Instagram @${S.instagram}</a></li>
           <li>${t(S.address)}</li>
           <li>${t(S.hours)}</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© ${S.year} stellas.digital</span>
+      <span>© ${S.year} ${S.legalName} · ${t(S.address)} · ${S.whatsappDisplay}</span>
       <span>${t(L.footerTech)} <a href="https://stellas.tech" style="color:var(--accent)">stellas.tech</a></span>
     </div>
   </div>
@@ -416,6 +417,7 @@ ${cta}`;
       <ul class="contact-list">
         <li><span>WhatsApp</span><strong><a href="${WA}" target="_blank" rel="noopener">${S.whatsappDisplay}</a></strong></li>
         <li><span>Email</span><strong><a href="mailto:${S.email}">${S.email}</a></strong></li>
+        <li><span>Instagram</span><strong><a href="https://www.instagram.com/${S.instagram}/" target="_blank" rel="noopener">@${S.instagram}</a></strong></li>
         <li><span>${t(K.office)}</span><strong>${t(S.address)}</strong></li>
         <li><span>${t(K.hoursLabel)}</span><strong>${t(S.hours)}</strong></li>
       </ul>
