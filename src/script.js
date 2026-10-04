@@ -29,39 +29,25 @@
 })();
 
 // ---- Analytics events ----
-gaTrack(name, params) {
+function gaTrack(name, params) {
   if (window.gtag) gtag('event', name, Object.assign({
     page_lang: document.documentElement.lang || 'en'
   }, params));
 }
 
-// Strip anything that looks like a phone number or email before sending text to GA
-gaClean(text) {
-  return (text || '')
-    .replace(/\S+@\S+/g, '[email]')
-    .replace(/\+?\d[\d\s-]{6,}/g, '[number]')
-    .slice(0, 100);
-}
-
-// Every WhatsApp link on the site, including the chat hand-off button
+// WhatsApp buttons on the page (the chat tracks its own)
 document.addEventListener('click', function (e) {
   var a = e.target.closest('a[href*="wa.me"]');
-  if (!a) return;
-
-  var inChat = a.closest('[class*="chat"]');
-  if (inChat) {
-    var msg = new URL(a.href).searchParams.get('text');
-    track('chat_handoff', { question: clean(msg) });
-  } else {
-    track('whatsapp_click', { link_text: a.textContent.trim().slice(0, 50) });
-  }
+  if (!a || a.closest('.sa')) return;
+  gaTrack('whatsapp_click', { link_text: a.textContent.trim().slice(0, 50) });
 });
 
-// Contact form ("Open WhatsApp" button)
+// Contact form (the chat's question box is a form too, so skip it)
 document.addEventListener('submit', function (e) {
   var form = e.target;
+  if (form.closest('.sa')) return;
   var select = form.querySelector('select');
-  track('enquiry_submit', {
+  gaTrack('enquiry_submit', {
     interest: select ? select.options[select.selectedIndex].text : ''
   });
 });
