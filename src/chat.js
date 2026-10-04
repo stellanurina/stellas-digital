@@ -87,6 +87,7 @@
         w.href = wa(lastQ ? t('Hi Stella, I have a question: ', 'Halo Stella, saya mau tanya: ') + lastQ : D.waMessage);
         w.target = '_blank'; w.rel = 'noopener'; w.className = 'sa-wa';
         w.textContent = t('Chat on WhatsApp', 'Chat via WhatsApp');
+        w.addEventListener('click', function () { ga('chat_handoff', { question: scrub(lastQ) }); });
         row.appendChild(w);
       }
       b.appendChild(row);
@@ -100,7 +101,7 @@
     var e = match(q);
     setTimeout(function () {
       if (e) bubble('bot', e.a, e.l, !!e.wa || !e.l);
-      else bubble('bot', D.fallback, null, true, q);
+      else { ga('chat_unanswered', { question: scrub(q) }); bubble('bot', D.fallback, null, true, q); }
     }, 350);
   }
 
@@ -117,6 +118,7 @@
     dot.hidden = true;
     if (!started) {
       started = true;
+      ga('chat_open');
       bubble('bot', D.greeting);
     }
     input.focus();
