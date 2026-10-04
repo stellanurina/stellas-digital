@@ -2,6 +2,8 @@
   "_readme": "All words and prices for stellas.digital. Edit here, then run `npm run build` (Hostinger does this automatically on deploy). Text is in {\"en\": ..., \"id\": ...} pairs. In any text, {p:name} becomes a formatted price from `prices`, e.g. {p:starter} -> Rp 3.000.000.",
 
   "site": {
+  "url": "https://stellas.digital",
+  "gaId": "G-F94T5CQQ7J",
     "url": "https://stellas.digital",
     "whatsapp": "62811181901",
     "whatsappDisplay": "+62 811 18 19 01",
