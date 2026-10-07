@@ -150,21 +150,25 @@ function build(lang) {
   // Written to its own file so the security policy can block all inline scripts.
   fs.writeFileSync(path.join(outDir, 'chat-data.js'), `window.STELLAS_CHAT=${JSON.stringify(chatData).replace(/</g, '\\u003c')};\n`);
   const chatScript = `<script src="chat-data.js"></script>`;
-// GA setup in its own file, so the security policy can stay strict
-if (S.gaId) {
-  fs.writeFileSync(path.join(outDir, 'ga.js'),
-    `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config',${JSON.stringify(S.gaId)});`);
-}
-${S.gaId ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${S.gaId}"></script>
-<script src="ga.js"></script>` : ''}
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '${S.gaId}');
-</script>` : ''}
+
+  // GA setup in its own file, so the security policy can stay strict
+  if (S.gaId) {
+    fs.writeFileSync(path.join(outDir, 'ga.js'),
+      `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config',${JSON.stringify(S.gaId)});`);
+  }
+  const gaScript = S.gaId
+    ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${S.gaId}"></script>\n<script src="ga.js"></script>`
+    : '';
+
+  function page(fname, meta, body) {
+    const html = `<!doctype html>
+<html lang="${lang}">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="${CSP}">
 <meta name="referrer" content="strict-origin-when-cross-origin">
+${gaScript}
 <title>${esc(t(meta.title))}</title>
 <meta name="description" content="${esc(t(meta.description))}">
 <link rel="canonical" href="${url(lang, fname)}">
