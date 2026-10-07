@@ -159,7 +159,7 @@ ${S.gaId ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${S.g
 <script src="ga.js"></script>` : ''}
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', '${site.gaId}');
+  gtag('config', '${S.gaId}');
 </script>` : ''}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
